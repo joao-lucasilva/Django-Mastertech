@@ -1,12 +1,30 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
+    <script defer src="{%static 'js/script.js' %}"></script>
     <title>Document</title>
 </head>
 <body>
-    
+    <p>Esse é o perfil do {{ nome }}</p>
+    {% if nome == "João" %}
+        <p>Sim, esta é a página do João</p>
+    {% else %}
+        <p>Você não é digno</p>
+    {% endif %}
+    <h1>Esse é o projeto Django Thundercats</h1>
+    <h3>Estamos na aplicação Lion do projeto Thundercats</h3>
+    <h3>42 é a resposta para a vida, o universo e tudo mais!</h3>
+    <iframe src="https://giphy.com/embed/BVlWY2vMZgLG8" width="480" height="192" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>  
+    <h2>Esses são nossos doginhos: </h2>
+    <ul>
+    {% for dog in cachorros %}
+        <li>{{dog}}</li>
+    {% endfor %}
+    </ul>
 </body>
 </html>

@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: grey;
+}
+h1{
+    color: blueviolet;
+}
+h3{
+    color: cyan;
+}
+h1, h2, h3{
+    text-align: center;
+}

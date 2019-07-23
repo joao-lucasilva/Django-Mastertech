@@ -2,4 +2,5 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    context = {"nome": "João","cachorros": ["Mel","Tobias","Belinha","Cacau","Radija","Thor"]}
+    return render(request, 'index.html', context)
